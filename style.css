@@ -41,3 +41,41 @@ body {
   max-width: var(--max-width);
   margin: 0 auto;
 }
+/* Estilos para el contenedor del Header */
+.site-header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Crea una sombra suave debajo para darle profundidad */
+  position: sticky;                      /* Mantiene el menú visible en la parte superior al bajar */
+  top: 0;
+  z-index: 1000;                         /* Asegura que el menú quede por encima de todo el contenido */
+}
+
+/* Alineación interna con Flexbox */
+.header-container {
+  display: flex;
+  justify-content: space-between; /* Pone el logo a la izquierda y el menú a la derecha */
+  align-items: center;            /* Alinea verticalmente al centro ambos elementos */
+  padding: 1rem 0;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  color: var(--primary-color);   /* Usa la variable de color naranja que creamos */
+}
+
+/* Espaciado del menú */
+.nav-menu {
+  display: flex;
+  gap: 1.5rem;                   /* Crea un espacio uniforme de 1.5rem entre cada enlace */
+}
+
+.nav-menu a {
+  text-decoration: none;         /* Quita la raya subrayada por defecto de los enlaces */
+  color: var(--dark-color);
+  font-weight: 600;
+  transition: var(--transition);  /* Hace que el cambio de color al pasar el cursor sea suave */
+}
+
+.nav-menu a:hover {
+  color: var(--primary-color);   /* Cambia el color cuando el usuario pasa el puntero sobre el link */
+}

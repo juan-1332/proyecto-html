@@ -1,0 +1,401 @@
+:root {
+  --primary-color: #4A6B53;     
+  --secondary-color: #E76F51;   
+  --dark-color: gray;        
+  --light-color: #F9F6F0;       
+  --card-bg: #EFECE6;           
+  
+  
+  --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --max-width: 1200px;
+  --border-radius: 8px;
+  --transition: all 0.3s ease;
+}
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--dark-color);
+  background-color: var(--light-color);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+/* Estilos para el contenedor del Header */
+.site-header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Crea una sombra suave debajo para darle profundidad */
+  position: sticky;                      /* Mantiene el menú visible en la parte superior al bajar */
+  top: 0;
+  z-index: 1000;                         /* Asegura que el menú quede por encima de todo el contenido */
+}
+
+/* Alineación interna con Flexbox */
+.header-container {
+  display: flex;
+  justify-content: space-between; /* Pone el logo a la izquierda y el menú a la derecha */
+  align-items: center;            /* Alinea verticalmente al centro ambos elementos */
+  padding: 1rem 0;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  color: var(--primary-color);   /* Usa la variable de color naranja que creamos */
+}
+
+
+.nav-menu {
+  display: flex;
+  gap: 1.5rem;                  
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 600;
+    position: relative;
+    transition: var(--transition);
+}
+
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;           
+    height: 2px;       
+    bottom: -4px;      
+    left: 0;
+    background-color: var(--primary-color); 
+    transition: width 0.3s ease; 
+}
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+    width: 100%; 
+}
+
+.nav-menu a:hover {
+    color: var(--primary-color);
+}
+
+.contenedorgeneral {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 4rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.textoinicio{
+    max-width: 600px;
+    margin-bottom: 1rem;
+}
+.carrusel{
+    width: 480px; 
+    height: 430px;
+    border-radius: 16px;
+    background-color: var(--card-bg);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+
+}
+.textoinicio{
+    margin-bottom: 1rem;
+}
+.textosobretitulo {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+.tituloinicio{
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 4rem;
+}
+.botonadoptar {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: #060606;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
+    margin: 1rm 0;
+    transition: var(--transition);
+}
+.botonadoptar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.imagen1, .imagen2, .imagen3 {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;   
+    background-repeat: no-repeat;    
+    background-position: center;  
+    opacity: 0;                  
+    animation: bannerAnimation 9s infinite; 
+}
+.imagen1 {
+    background-image: url(gatito1.jpg);
+    animation-delay: 0s;  
+}
+.imagen2 {
+    background-image: url(perrito1.jpg);
+    animation-delay: 3s;  
+}
+.imagen3 {
+    background-image: url(perrito2.jpg);
+    animation-delay: 6s;
+}
+.misionvision{
+    padding: 3rem 0;
+    background-color: var(--light-color);
+}
+.contenedormision{
+    text-align: center;
+}
+.minietiqueta {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+.tituloprincipalmision{
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    margin-bottom: 1.5rem;
+}
+.mision{
+    display:flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.nuestramision{
+    background-color: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    max-width: 500px;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: var(--transition);
+}
+.nuestravision{
+    background-color: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    max-width: 500px;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: var(--transition);
+}
+.nuestramision:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+.nuestravision:hover{
+     transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+.textomision{
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+.textovision{
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+parrafomision{
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+parrafovision{
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+.tarjetaaccion {
+    padding: 3rem 0;
+    text-align: center;
+}
+.tituloprincipalaccion {
+    font-size: 2.2rem;
+    color: var(--dark-color);
+    margin-bottom: 1.5rem;
+}
+.dividirtarjetas{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.tarjetadonaciones{
+    background-color: var(--card-bg);
+    padding:2.5rem;
+    border-radius: var(--border-radius);
+    width: 100%;
+    max-width: 500px;
+    text-align: left;
+    text-decoration: none;
+    color: var(--dark-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.tarjetavoluntariado{
+    background-color: var(--card-bg);
+    padding:2.5rem;
+    border-radius: var(--border-radius);
+    width: 100%;
+    max-width: 500px;
+    text-align: left;
+    text-decoration: none;
+    color: var(--dark-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.tarjetadonaciones:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+}
+.tarjetavoluntariado:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+}
+.donaciones{
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin:1.5rem 0 0.5rem 0;
+}
+.voluntariado{
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin:1.5rem 0 0.5rem 0;
+}
+.parrafodonaciones{
+    color: var(--dark-color);
+    margin-bottom:1.5rem;
+    line-height: 1.5;
+}
+.parrafovoluntariado{
+    color: var(--dark-color);
+    margin-bottom:1.5rem;
+    line-height: 1.5;
+}
+.enlacedonacion {
+    font-weight: 700;
+    color: var(--secondary-color);
+    font-size: 0.95rem;
+}
+.enlacevoluntariado{
+    font-weight: 700;
+    color: var(--secondary-color);
+    font-size: 0.95rem;
+}
+
+.footer{
+    background-color: var(--card-bg);
+    padding: 0.90rem 0 1.5rem 0;
+    border-top: 1pox solid rgba(0, 0, 0, 0.05);
+    color:var(--dark-color)
+}
+.footersuperior{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+.footerlogo{
+    font-size: 1.3rem;
+    color: var(--primary-color);
+}
+.footerfrase{
+    font-size: 0.95rem;
+    color: var(--dark-color);
+}
+.gmail{
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 600;
+    transition: var(--transition);
+}
+.gmail:hover{
+    color: var(--secondary-color);
+}
+.lineadivisora{
+    border: none;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.01);
+    margin-bottom: 1.5rem;
+}
+.footerinferior{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+    color: rgba(38, 70, 83, 0.7);
+}
+.contenedorfooter{
+    margin:1.5rem 4.5rem 1.5rem 4.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes bannerAnimation {
+    0% { 
+        opacity: 0; 
+       
+    }
+    10% { 
+        opacity: 1;
+    }
+    33% { 
+        opacity: 1; 
+    }
+    43% { 
+        opacity: 0; 
+    
+    }
+    100% { 
+        opacity: 0; 
+    }
+}

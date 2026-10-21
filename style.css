@@ -1,7 +1,7 @@
 /* css/styles.css */
 :root {
   /* Paleta de Colores */
-  --primary-color: #624e3c;      /* Naranja cálido */
+  --primary-color: #032812;      /* Naranja cálido */
   --primary-hover: #d35400;
   --secondary-color: #27ae60;    /* Verde naturaleza/esperanza */
   --secondary-hover: #219150;
@@ -77,12 +77,94 @@ body {
 }
 
 .nav-menu a:hover {
-  color: var(--primary-color);   /* Cambia el color cuando el usuario pasa el puntero sobre el link */
+  color: #004f2c;   /* Cambia el color cuando el usuario pasa el puntero sobre el link */
 }
 
-.contenedorcarrusel{
-    display: flex;
+.contenedorgeneral {
+    display:flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem; 
+    gap: 2rem;
+    padding: 4rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.textoinicio{
+    max-width: 600px;
+    margin-bottom: 1rem;
+}
+.carrusel{
+    width: 520px; 
+    height: 420px;
+    border-radius: var(--border-radius);
+    background-color: #e2e8f0;
+    position: relative;
+    overflow: hidden;
+}
+.textoinicio{
+    margin-bottom: 1rem;
+}
+.textosobretitulo {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+.tituloinicio{
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 4rem;
+}
+.botonadoptar {
+    display: inline-block;
+    background-color: #e07a5f;
+    color:black;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
+}
+.imagen1, .imagen2, .imagen3 {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;       
+    background-position: center;  
+    opacity: 0;                  
+    animation: bannerAnimation 9s infinite; 
+}
+
+
+.imagen1 {
+    background-image: url(gatito1.jpg);
+    animation-delay: 0s;  
+}
+.imagen2 {
+    background-image: url(perrito1.jpg);
+    animation-delay: 3s;  
+}
+.imagen3 {
+    background-image: url(perrito2.jpg);
+    animation-delay: 6s;
+}
+@keyframes bannerAnimation {
+    0% { 
+        opacity: 0; 
+       
+    }
+    10% { 
+        opacity: 1;
+    }
+    33% { 
+        opacity: 1; 
+    }
+    43% { 
+        opacity: 0; 
+    
+    }
+    100% { 
+        opacity: 0; 
+    }
 }

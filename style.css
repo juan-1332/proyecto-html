@@ -367,19 +367,331 @@ parrafovision{
     margin:1.5rem 4.5rem 1.5rem 4.5rem;
 }
 
+.seccion-adopta {
+  padding: 60px 0;
+}
+
+.encabezado-seccion {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.subtitulo-seccion {
+  display: inline-block;
+  color: var(--secondary-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.encabezado-seccion h2 {
+  font-size: 2.2rem;
+  color: var(--dark-color);
+  margin-bottom: 10px;
+}
+
+.encabezado-seccion p {
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.grid-animales {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-bottom: 60px;
+}
+.targeta-animal {
+  background: #ffffff;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--gray-border);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+.targeta-animal:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.tarjeta-img {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+.tarjeta-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+.badge-disponible {
+  background-color: var(--success-color);
+}
+.badge-proceso {
+  background-color: var(--accent-color);
+  color: var(--dark-color);
+}
+.badge-adoptado {
+  background-color: var(--error-color);
+}
+.tarjeta-info {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.tarjeta-info h3 {
+  font-size: 1.2rem;
+  color: var(--dark-color);
+  margin-bottom: 4px;
+}
+.tarjeta-info .raza {
+  font-size: 0.85rem;
+  color: var(--secondary-color);
+  margin-bottom: 4px;
+}
+.tarjeta-info .descripcion-corta {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+.btn-card {
+  text-align: center;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+.btn-card:hover {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+}
+
+
+
+
+@media (max-width: 992px) {
+    .grid-animales {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 576px) {
+    .container {
+        width: calc(100% - 32px);
+        margin: 0 auto;
+    }
+    .grid-animales {
+        width: 100%;
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .targeta-animal {
+      min-width: 0;
+    }
+}
 
 
 
 
 
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.modal-overlay:target {
+  display: flex;
+}
+
+.Perfil-destacado {
+  background: #ffffff;
+  border-radius: var(--border-radius);
+  max-width: 900px;
+  width: 90%;
+  max-height: 85vh;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  position: relative;
+  animation: entradaModal 0.25s ease-out;
+}
+@keyframes entradaModal {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
 
+.btn-cerrar {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #666;
+  z-index: 20;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: var(--transition);
+}
+.btn-cerrar:hover {
+  background-color: var(--error-color);
+  color: #ffffff;
+}
 
+.perfil-img {
+  width: 100%;
+  height: 100%;
+  min-height: 100px;
+}
+.perfil-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.perfil-info {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+  max-height: 85vh;
+}
+.perfil-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  padding-right: 30px;
+}
+.perfil-header h3 {
+  font-size: 1.7rem;
+  color: var(--dark-color);
+  margin-bottom: 4px;
+}
+.perfil-header .raza {
+  font-size: 0,9rem;
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+.perfil-header .historia {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
 
+.salud-box {
+  background-color: var(--light-color);
+  border-left: 4px solid var(--secondary-color);
+  padding: 12px 16px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+.salud-box h4 {
+  font-size: 0.9rem;
+  color: var(--dark-color);
+  margin-bottom: 6px;
+}
+.salud-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.salud-box li {
+  font-size: 0.8rem;
+  color: #555;
+  margin-bottom: 3px;
+}
 
+.btn-adoptar {
+  display: inline-block;
+  text-align: center;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: var(--transition);
+  align-self: flex-start;
+}
+.btn-adoptar:hover {
+  filter: brightness(0.92);
+  transform: translateY(-2px);
+}
 
+.btn-deshabilitado {
+  background-color: #bdc3c7;
+  color: #ffffff;
+  pointer-events: none;
+}
+.btn-adoptado-link {
+  background-color: var(--dark-color);
+}
 
-
+@media (max-width: 640px) {
+  .Perfil-destacado {
+    grid-template-columns: 1fr;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  .perfil-img {
+    height: 220px;
+    min-height: 220px;
+  }
+  .perfil-info {
+    padding: 20px;
+    max-height: none;
+    overflow-y: visible;
+  }
+  .btn-adoptar {
+    align-self: stretch;
+  }
+}
 @keyframes bannerAnimation {
     0% { 
         opacity: 0; 

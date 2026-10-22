@@ -80,9 +80,9 @@ $$
 
 ```text
 proyecto_HTML/
-├── index.html              # Estructura principal y formulario
+├── app.html              # Estructura principal y formulario
 ├── css/
-│   └── estilos.css         # Reglas de diseño, layout Flexbox y keyframes
+│   └── styles.css         # Reglas de diseño, layout Flexbox y keyframes
 └── imagenes/
     ├── sprite.png          # Tira de imágenes en formato PNG transparente
     └── logo.png            # Recursos gráficos adicionales

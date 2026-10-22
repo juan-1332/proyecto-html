@@ -4,16 +4,10 @@
   --dark-color: gray;        
   --light-color: #F9F6F0;       
   --card-bg: #EFECE6;           
-<<<<<<< HEAD
-  --success-color: #2ecc71;
-  --error-color: #e74c3c;
-  --accent-color: #f1c40f;
-=======
   --success-color:#2ecc71;
   --error-color:#e74c3c;
   --accent-color: #f1c40f;
   
->>>>>>> f89c238f42ba459a283f0a80431e0521cebb3fc3
   --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
   --max-width: 1200px;
   --border-radius: 8px;
@@ -38,26 +32,26 @@ body {
   max-width: var(--max-width);
   margin: 0 auto;
 }
-/* Estilos para el contenedor del Header */
+
 .site-header {
   background-color: #ffffff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Crea una sombra suave debajo para darle profundidad */
-  position: sticky;                      /* Mantiene el menú visible en la parte superior al bajar */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+  position: sticky;                      
   top: 0;
-  z-index: 1000;                         /* Asegura que el menú quede por encima de todo el contenido */
+  z-index: 1000;                        
 }
 
-/* Alineación interna con Flexbox */
+
 .header-container {
   display: flex;
-  justify-content: space-between; /* Pone el logo a la izquierda y el menú a la derecha */
-  align-items: center;            /* Alinea verticalmente al centro ambos elementos */
+  justify-content: space-between;
+  align-items: center;            
   padding: 1rem 0;
 }
 
 .logo h1 {
   font-size: 1.5rem;
-  color: var(--primary-color);   /* Usa la variable de color naranja que creamos */
+  color: var(--primary-color);   
 }
 
 
@@ -498,33 +492,6 @@ haciendo miguel
   background-color: var(--secondary-color);
   color: #ffffff;
 }
-
-
-
-
-@media (max-width: 992px) {
-    .grid-animales {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media (max-width: 576px) {
-    .container {
-        width: calc(100% - 32px);
-        margin: 0 auto;
-    }
-    .grid-animales {
-        width: 100%;
-        grid-template-columns: minmax(0, 1fr);
-    }
-    .targeta-animal {
-      min-width: 0;
-    }
-}
-
-
-
-
-
 .modal-overlay {
   display: none;
   position: fixed;
@@ -556,16 +523,6 @@ haciendo miguel
   grid-template-columns: 1fr 1.3fr;
   position: relative;
   animation: entradaModal 0.25s ease-out;
-}
-@keyframes entradaModal {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
 }
 
 
@@ -880,11 +837,6 @@ haciendo miguel
   color: var(--secondary-color);
 }
 
-@media (max-width: 992px){
-  .contenedorcontacto{
-   grid-template-columns: 1fr;
-  }
-}
 
 .sprite{
   display: flex;
@@ -896,17 +848,17 @@ haciendo miguel
   background-repeat: no-repeat;
   animation: perrito 0.6s steps(6) infinite;
 }
-@keyframes perrito{
-  from{
-    background-position: 0 0;
-  }
-  to{
-    background-position: -667px 0;
-  }
-}
 
+
+/*responsive*/
 @media (max-width: 992px){
-    .contenedorgeneral {
+  .contenedorcontacto{
+   grid-template-columns: 1fr;
+  }
+  .grid-animales {
+        grid-template-columns: repeat(2, 1fr);
+    }
+   .contenedorgeneral {
         flex-direction: column;   
         text-align: center;
         padding: 2rem 0;
@@ -940,9 +892,8 @@ haciendo miguel
     .tarjetainformacionsecundaria {
         max-width: 100%;      
     }
+  
 }
-
-
 @media (max-width: 576px) {
 
     .header-container {
@@ -964,7 +915,8 @@ haciendo miguel
     }
 
     .formulario {
-        padding: 1.5rem;        
+        padding: 1.5rem;
+        margin: 0 1.5rem 0 1.5rem;       
     }
 
     .titulocontacto {
@@ -987,6 +939,17 @@ haciendo miguel
         text-align: center;
         gap: 0.8rem;
     }
+   .container {
+        width: calc(100% - 32px);
+        margin: 0 auto;
+    }
+    .grid-animales {
+        width: 100%;
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .targeta-animal {
+      min-width: 0;
+    }
 }
 
 @media (max-width: 640px) {
@@ -1008,6 +971,7 @@ haciendo miguel
     align-self: stretch;
   }
 }
+/*keyframes osea las animaciones de mierda*/
 @keyframes bannerAnimation {
     0% { 
         opacity: 0; 
@@ -1026,4 +990,22 @@ haciendo miguel
     100% { 
         opacity: 0; 
     }
+}
+@keyframes perrito{
+  from{
+    background-position: 0 0;
+  }
+  to{
+    background-position: -667px 0;
+  }
+}
+@keyframes entradaModal {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

@@ -869,7 +869,7 @@ haciendo miguel
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 992px){
     .contenedorgeneral {
         flex-direction: column;   
         text-align: center;
@@ -899,7 +899,7 @@ haciendo miguel
 
     .informacionlateral {
         align-items: center;     
-
+    }
     .tarjetainformacioncontacto,
     .tarjetainformacionsecundaria {
         max-width: 100%;      

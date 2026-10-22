@@ -4,7 +4,9 @@
   --dark-color: gray;        
   --light-color: #F9F6F0;       
   --card-bg: #EFECE6;           
-  
+  --success-color:#2ecc71;
+  --error-color:#e74c3c;
+  --accent-color: #f1c40f;
   
   --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
   --max-width: 1200px;
@@ -151,15 +153,15 @@ body {
     animation: bannerAnimation 9s infinite; 
 }
 .imagen1 {
-    background-image: url(gatito1.jpg);
+    background-image: url(imagenes/gatito1.jpg);
     animation-delay: 0s;  
 }
 .imagen2 {
-    background-image: url(perrito1.jpg);
+    background-image: url(imagenes/perrito1.jpg);
     animation-delay: 3s;  
 }
 .imagen3 {
-    background-image: url(perrito2.jpg);
+    background-image: url(imagenes/perrito2.jpg);
     animation-delay: 6s;
 }
 .misionvision{
@@ -662,6 +664,10 @@ parrafovision{
 .btn-adoptar:hover {
   filter: brightness(0.92);
   transform: translateY(-2px);
+}
+.Perfil-destacado .badge {
+  position: static;
+  align-self: flex-start;
 }
 
 .btn-deshabilitado {

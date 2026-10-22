@@ -4,16 +4,10 @@
   --dark-color: gray;        
   --light-color: #F9F6F0;       
   --card-bg: #EFECE6;           
-<<<<<<< HEAD
-  --success-color: #2ecc71;
-  --error-color: #e74c3c;
-  --accent-color: #f1c40f;
-=======
   --success-color:#2ecc71;
   --error-color:#e74c3c;
   --accent-color: #f1c40f;
   
->>>>>>> f89c238f42ba459a283f0a80431e0521cebb3fc3
   --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
   --max-width: 1200px;
   --border-radius: 8px;

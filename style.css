@@ -677,6 +677,171 @@ haciendo miguel
 .btn-adoptado-link {
   background-color: var(--dark-color);
 }
+.seccioncontacto{
+  padding: 4rem 0;
+  background-color: var(--light-color);
+}
+.contenedorcontacto{
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+.formulario{
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+.titulocontacto{
+  font-size: 2.2rem;
+  color: var(--dark-color);
+  margin-bottom: 0.5rem;
+}
+.descripcion-contacto {
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+.formulariogrupogeneral{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+.formulariogrupo{
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+.formulariogrupo label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--dark-color);
+  margin-bottom: 0.4rem;
+}
+.formulariogrupo input,
+.formulariogrupo select,
+.formulariogrupo textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid #dcd6cd;
+  border-radius: var(--border-radius);    
+  font-family: var(--font-main);
+  font-size: 0.95rem;
+  background-color: #fcfbfa;
+  color: var(--dark-color);
+  transition: var(--transition);
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(74, 107, 83, 0.1);
+}
+.terminosycondiciones{
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin: 1.5rem 0;
+  font-size: 0.85rem;
+  color:#555;
+}
+.terminosycondiciones input{
+  margin-top: 0.3rem;
+}
+.btn-enviar {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  padding: 0.85rem 1.8rem;
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.btn-enviar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(231, 111, 81, 0.3);
+}
+.informacionlateral{
+  display: flex;
+  flex-direction: column;
+  gap:1.5rem;
+}
+.tarjetainformacioncontacto,
+.tarjetainformacionsecundaria{
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+.tarjetainformacioncontacto h3,
+.tarjetainformacionsecundaria h3 {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin-bottom: 1.2rem;
+}
+.listacontacto {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.listacontacto li{
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+}
+.listacontacto strong{
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #777;
+  letter-spacing: 0.5px;
+}
+.listacontacto a,
+.listacontacto span {
+  color: var(--dark-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+.listacontacto a:hover{
+  color: var(--secondary-color);
+}
+.horariosatencion{
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding-top: 1rem;
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+.notalegal{
+  font-size: 0.75rem;;
+  color: #888;
+  line-height: 1.4;
+  display: block;
+}
+.tarjetainformacionsecundaria p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+.notaenfasis{
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+@media (max-widht: 992px){
+  .contenedorcontacto{
+    grid-template-columns: 1fr;
+  }
+}
 
 @media (max-width: 640px) {
   .Perfil-destacado {

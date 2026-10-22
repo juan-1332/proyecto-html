@@ -526,6 +526,7 @@ haciendo miguel
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
   z-index: 9999;
   justify-content: center;
   align-items: center;
@@ -689,6 +690,7 @@ haciendo miguel
 .formulario{
   background-color: #ffffff;
   padding: 2.5rem;
+  margin: 0rem 1.5rem 2.5rem 10rem;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 }
@@ -766,6 +768,7 @@ haciendo miguel
   margin-top: 0.3rem;
 }
 .botonenviar {
+  text-decoration: none;
   display: inline-block;
   background-color: var(--secondary-color);
   color: #ffffff;
@@ -795,7 +798,7 @@ haciendo miguel
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
   width: 100%;
-  max-width: 420px;
+  max-width: 460px;
   box-sizing: border-box;
 }
 .tarjetainformacionsecundaria{
@@ -865,18 +868,10 @@ haciendo miguel
    grid-template-columns: 1fr;
   }
 }
-/* ==========================================================================
-   AJUSTES RESPONSIVOS GLOBALES (MEDIA QUERIES)
-   ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   1. TABLETS Y PANTALLAS MEDIANAS (Ancho máximo: 992px)
-   -------------------------------------------------------------------------- */
 @media (max-width: 992px) {
-    
-    /* A. Sección Inicio: Pasa de horizontal (lado a lado) a vertical */
     .contenedorgeneral {
-        flex-direction: column;   /* Apila el texto arriba y el carrusel abajo */
+        flex-direction: column;   
         text-align: center;
         padding: 2rem 0;
     }
@@ -886,31 +881,28 @@ haciendo miguel
     }
 
     .tituloinicio {
-        font-size: 2.3rem;        /* Reduce el tamaño del título para que no ocupe toda la pantalla */
+        font-size: 2.3rem;       
         margin-bottom: 1.5rem;
     }
-
-    /* B. Carrusel Responsive: Le quitamos los 480px fijos */
     .carrusel {
-        width: 100%;              /* Ocupa el 100% del contenedor en pantallas pequeñas */
-        max-width: 450px;         /* Limita el tamaño en tablets para que no se vea gigante */
-        height: 350px;            /* Ajusta la altura proporcionalmente */
+        width: 100%;              
+        max-width: 450px;         
+        height: 350px;           
         margin: 0 auto;
     }
 
-    /* C. Formulario de Contacto: Pasa a 1 columna (Corregido 'max-width') */
+   
     .contenedorcontacto {
-        grid-template-columns: 1fr; /* Apila el formulario arriba y la tarjeta de info abajo */
+        grid-template-columns: 1fr; 
         gap: 2rem;
     }
 
     .informacionlateral {
-        align-items: center;      /* Centra las tarjetas de información en la pantalla */
-    }
+        align-items: center;     
 
     .tarjetainformacioncontacto,
     .tarjetainformacionsecundaria {
-        max-width: 100%;          /* Ocupa todo el ancho en tablets y móviles */
+        max-width: 100%;      
     }
 }
 

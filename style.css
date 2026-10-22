@@ -4,8 +4,9 @@
   --dark-color: gray;        
   --light-color: #F9F6F0;       
   --card-bg: #EFECE6;           
-  
-  
+  --success-color: #2ecc71;
+  --error-color: #e74c3c;
+  --accent-color: #f1c40f;
   --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
   --max-width: 1200px;
   --border-radius: 8px;
@@ -151,15 +152,15 @@ body {
     animation: bannerAnimation 9s infinite; 
 }
 .imagen1 {
-    background-image: url(gatito1.jpg);
+    background-image: url(imagenes/gatito1.jpg);
     animation-delay: 0s;  
 }
 .imagen2 {
-    background-image: url(perrito1.jpg);
+    background-image: url(imagenes/perrito1.jpg);
     animation-delay: 3s;  
 }
 .imagen3 {
-    background-image: url(perrito2.jpg);
+    background-image: url(imagenes/perrito2.jpg);
     animation-delay: 6s;
 }
 .misionvision{
@@ -366,6 +367,10 @@ parrafovision{
 .contenedorfooter{
     margin:1.5rem 4.5rem 1.5rem 4.5rem;
 }
+/*parte de 
+adopcion que esta
+haciendo miguel
+*/
 
 .seccion-adopta {
   padding: 60px 0;
@@ -404,17 +409,17 @@ parrafovision{
     gap: 25px;
     margin-bottom: 60px;
 }
-.targeta-animal {
+.tarjeta-animal {
   background: #ffffff;
   border-radius: var(--border-radius);
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  border: 1px solid var(--gray-border);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
-  transition: var(--transition);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.targeta-animal:hover {
+.tarjeta-animal:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
@@ -599,6 +604,12 @@ parrafovision{
   overflow-y: auto;
   max-height: 85vh;
 }
+.perfil-info .badge {
+  position: static;
+  display: inline-block;
+  align-self: center;
+  margin: 0;
+}
 .perfil-header {
   display: flex;
   justify-content: space-between;
@@ -671,6 +682,300 @@ parrafovision{
 }
 .btn-adoptado-link {
   background-color: var(--dark-color);
+}
+.seccioncontacto{
+  padding: 4rem 0;
+  background-color: var(--light-color);
+}
+.contenedorcontacto{
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+.formulario{
+  background-color: #ffffff;
+  padding: 2.5rem;
+  margin: 0rem 1.5rem 2.5rem 10rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+.titulocontacto{
+  font-size: 2.2rem;
+  color: var(--dark-color);
+  margin-bottom: 0.5rem;
+}
+.descripccioncontacto {
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+.formulariogrupogeneral{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+.formulariogrupo{
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+.formulariogrupo label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--dark-color);
+  margin-bottom: 0.4rem;
+}
+.formulariogrupo input,
+.formulariogrupo select {
+  padding: 0.75rem 1rem;
+  border: 1px solid #dcd6cd;
+  border-radius: var(--border-radius);    
+  font-family: var(--font-main);
+  font-size: 0.95rem;
+  background-color: #fcfbfa;
+  color: var(--dark-color);
+  transition: var(--transition);
+
+}
+.formulariogrupo textarea{
+  padding: 0.75rem 1rem;
+  border: 1px solid #dcd6cd;
+  border-radius: var(--border-radius);    
+  font-family: var(--font-main);
+  font-size: 0.95rem;
+  background-color: #fcfbfa;
+  color: var(--dark-color);
+  transition: var(--transition);
+  resize:none
+}
+.formulariogrupo input:focus,
+.formulariogrupo select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(74, 107, 83, 0.1);
+}
+.formulariogrupo textarea:focus{
+  outline: none;
+  border-color: var(--primary-color);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(74, 107, 83, 0.12);
+}
+.terminosycondiciones{
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin: 1.5rem 0;
+  font-size: 0.85rem;
+  color:#555;
+}
+.terminosycondiciones input{
+  margin-top: 0.3rem;
+}
+.botonenviar {
+  text-decoration: none;
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  padding: 0.85rem 1.8rem;
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.botonenviar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(231, 111, 81, 0.3);
+}
+.informacionlateral{
+  display: flex;
+  flex-direction: column;
+  gap:1.5rem;
+  align-items: flex-start;
+  width: 100%;
+}
+.tarjetainformacioncontacto,
+.tarjetainformacionsecundaria{
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  width: 100%;
+  max-width: 460px;
+  box-sizing: border-box;
+}
+.tarjetainformacionsecundaria{
+  background-color: #E8EFE9;
+}
+.tarjetainformacioncontacto h3,
+.tarjetainformacionsecundaria h3 {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin-bottom: 1.2rem;
+}
+.listacontacto {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.listacontacto li{
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+}
+.listacontacto strong{
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #777;
+  letter-spacing: 0.5px;
+}
+.listacontacto a,
+.listacontacto span {
+  color: var(--dark-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+.listacontacto a:hover{
+  color: var(--secondary-color);
+}
+.horariosatencion{
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding-top: 1rem;
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+.notalegal{
+  font-size: 0.75rem;;
+  color: #888;
+  line-height: 1.4;
+  display: block;
+}
+.tarjetainformacionsecundaria p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+.notaenfasis{
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+@media (max-width: 992px){
+  .contenedorcontacto{
+   grid-template-columns: 1fr;
+  }
+}
+
+.sprite{
+  display: flex;
+  flex-direction: column;
+  margin:auto;
+  width: 111.16px;
+  height: 91px;
+  background-image: url(imagenes/sprite.png);
+  background-repeat: no-repeat;
+  animation: perrito 0.6s steps(6) infinite;
+}
+@keyframes perrito{
+  from{
+    background-position: 0 0;
+  }
+  to{
+    background-position: -667px 0;
+  }
+}
+
+@media (max-width: 992px){
+    .contenedorgeneral {
+        flex-direction: column;   
+        text-align: center;
+        padding: 2rem 0;
+    }
+
+    .textoinicio {
+        max-width: 100%;
+    }
+
+    .tituloinicio {
+        font-size: 2.3rem;       
+        margin-bottom: 1.5rem;
+    }
+    .carrusel {
+        width: 100%;              
+        max-width: 450px;         
+        height: 350px;           
+        margin: 0 auto;
+    }
+
+   
+    .contenedorcontacto {
+        grid-template-columns: 1fr; 
+        gap: 2rem;
+    }
+
+    .informacionlateral {
+        align-items: center;     
+    }
+    .tarjetainformacioncontacto,
+    .tarjetainformacionsecundaria {
+        max-width: 100%;      
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .header-container {
+        flex-direction: column;  
+        gap: 0.8rem;
+    }
+
+    .nav-menu {
+        gap: 1rem;
+        font-size: 0.9rem;      
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    
+    .formulariogrupogeneral {
+        grid-template-columns: 1fr; 
+        gap: 0.8rem;
+    }
+
+    .formulario {
+        padding: 1.5rem;        
+    }
+
+    .titulocontacto {
+        font-size: 1.7rem;
+    }
+
+   
+    .formulariogrupo textarea {
+        width: 100%;
+        min-height: 110px;
+    }
+
+    .contenedorfooter {
+        margin: 1.5rem 1rem;       
+    }
+
+    .footersuperior,
+    .footerinferior {
+        flex-direction: column;   
+        text-align: center;
+        gap: 0.8rem;
+    }
 }
 
 @media (max-width: 640px) {

@@ -699,7 +699,7 @@ haciendo miguel
   color: var(--dark-color);
   margin-bottom: 0.5rem;
 }
-.descripcion-contacto {
+.descripccioncontacto {
   color: #666;
   margin-bottom: 2rem;
   font-size: 0.95rem;
@@ -741,7 +741,7 @@ haciendo miguel
   background-color: #fcfbfa;
   color: var(--dark-color);
   transition: var(--transition);
-  resize: none;
+  resize:none
 }
 .formulariogrupo input:focus,
 .formulariogrupo select:focus {
@@ -866,6 +866,23 @@ haciendo miguel
 @media (max-width: 992px){
   .contenedorcontacto{
    grid-template-columns: 1fr;
+  }
+}
+
+.sprite{
+  margin: ;
+  width: 258px;
+  height: 256px;
+  background-image: url(imagenes/sprite.png);
+  background-repeat: no-repeat;
+  animation: perrito 0.6s steps(4) infinite;
+}
+@keyframes perrito{
+  from{
+    background-position: 0 0;
+  }
+  to{
+    background-position: -1032px 0;
   }
 }
 

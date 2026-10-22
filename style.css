@@ -720,8 +720,7 @@ haciendo miguel
   margin-bottom: 0.4rem;
 }
 .formulariogrupo input,
-.formulariogrupo select,
-.formulariogrupo textarea {
+.formulariogrupo select {
   padding: 0.75rem 1rem;
   border: 1px solid #dcd6cd;
   border-radius: var(--border-radius);    
@@ -730,14 +729,31 @@ haciendo miguel
   background-color: #fcfbfa;
   color: var(--dark-color);
   transition: var(--transition);
+
 }
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
+.formulariogrupo textarea{
+  padding: 0.75rem 1rem;
+  border: 1px solid #dcd6cd;
+  border-radius: var(--border-radius);    
+  font-family: var(--font-main);
+  font-size: 0.95rem;
+  background-color: #fcfbfa;
+  color: var(--dark-color);
+  transition: var(--transition);
+  resize: none;
+}
+.formulariogrupo input:focus,
+.formulariogrupo select:focus {
   outline: none;
   border-color: var(--primary-color);
   background-color: #ffffff;
   box-shadow: 0 0 0 3px rgba(74, 107, 83, 0.1);
+}
+.formulariogrupo textarea:focus{
+  outline: none;
+  border-color: var(--primary-color);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(74, 107, 83, 0.12);
 }
 .terminosycondiciones{
   display: flex;
@@ -750,7 +766,7 @@ haciendo miguel
 .terminosycondiciones input{
   margin-top: 0.3rem;
 }
-.btn-enviar {
+.botonenviar {
   display: inline-block;
   background-color: var(--secondary-color);
   color: #ffffff;
@@ -762,7 +778,7 @@ haciendo miguel
   cursor: pointer;
   transition: var(--transition);
 }
-.btn-enviar:hover {
+.botonenviar:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 15px rgba(231, 111, 81, 0.3);
 }
@@ -839,7 +855,7 @@ haciendo miguel
 
 @media (max-widht: 992px){
   .contenedorcontacto{
-    grid-template-columns: 1fr;
+   grid-template-columns: 1fr;
   }
 }
 

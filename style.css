@@ -409,17 +409,17 @@ haciendo miguel
     gap: 25px;
     margin-bottom: 60px;
 }
-.targeta-animal {
+.tarjeta-animal {
   background: #ffffff;
   border-radius: var(--border-radius);
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  border: 1px solid var(--gray-border);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
-  transition: var(--transition);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.targeta-animal:hover {
+.tarjeta-animal:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
@@ -526,7 +526,6 @@ haciendo miguel
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(4px);
   z-index: 9999;
   justify-content: center;
   align-items: center;

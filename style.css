@@ -876,18 +876,21 @@ haciendo miguel
 }
 
 .sprite{
-  width: 516px;
-  height: 512px;
+  display: flex;
+  flex-direction: column;
+  margin:auto;
+  width: 111.16px;
+  height: 91px;
   background-image: url(imagenes/sprite.png);
   background-repeat: no-repeat;
-  animation: perrito 0.6s steps(4) infinite;
+  animation: perrito 0.6s steps(6) infinite;
 }
 @keyframes perrito{
   from{
     background-position: 0 0;
   }
   to{
-    background-position: -2064px 0;
+    background-position: -667px 0;
   }
 }
 

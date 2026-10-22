@@ -13,6 +13,10 @@
   --border-radius: 8px;
   --transition: all 0.3s ease;
 }
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 1.5rem;
+}
 /* Reset básico */
 * {
   box-sizing: border-box;

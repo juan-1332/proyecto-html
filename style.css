@@ -786,6 +786,8 @@ haciendo miguel
   display: flex;
   flex-direction: column;
   gap:1.5rem;
+  align-items: flex-start;
+  width: 100%;
 }
 .tarjetainformacioncontacto,
 .tarjetainformacionsecundaria{
@@ -793,6 +795,12 @@ haciendo miguel
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+}
+.tarjetainformacionsecundaria{
+  background-color: #E8EFE9;
 }
 .tarjetainformacioncontacto h3,
 .tarjetainformacionsecundaria h3 {
@@ -853,10 +861,105 @@ haciendo miguel
   color: var(--secondary-color);
 }
 
-@media (max-widht: 992px){
+@media (max-width: 992px){
   .contenedorcontacto{
    grid-template-columns: 1fr;
   }
+}
+/* ==========================================================================
+   AJUSTES RESPONSIVOS GLOBALES (MEDIA QUERIES)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. TABLETS Y PANTALLAS MEDIANAS (Ancho máximo: 992px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+    
+    /* A. Sección Inicio: Pasa de horizontal (lado a lado) a vertical */
+    .contenedorgeneral {
+        flex-direction: column;   /* Apila el texto arriba y el carrusel abajo */
+        text-align: center;
+        padding: 2rem 0;
+    }
+
+    .textoinicio {
+        max-width: 100%;
+    }
+
+    .tituloinicio {
+        font-size: 2.3rem;        /* Reduce el tamaño del título para que no ocupe toda la pantalla */
+        margin-bottom: 1.5rem;
+    }
+
+    /* B. Carrusel Responsive: Le quitamos los 480px fijos */
+    .carrusel {
+        width: 100%;              /* Ocupa el 100% del contenedor en pantallas pequeñas */
+        max-width: 450px;         /* Limita el tamaño en tablets para que no se vea gigante */
+        height: 350px;            /* Ajusta la altura proporcionalmente */
+        margin: 0 auto;
+    }
+
+    /* C. Formulario de Contacto: Pasa a 1 columna (Corregido 'max-width') */
+    .contenedorcontacto {
+        grid-template-columns: 1fr; /* Apila el formulario arriba y la tarjeta de info abajo */
+        gap: 2rem;
+    }
+
+    .informacionlateral {
+        align-items: center;      /* Centra las tarjetas de información en la pantalla */
+    }
+
+    .tarjetainformacioncontacto,
+    .tarjetainformacionsecundaria {
+        max-width: 100%;          /* Ocupa todo el ancho en tablets y móviles */
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .header-container {
+        flex-direction: column;  
+        gap: 0.8rem;
+    }
+
+    .nav-menu {
+        gap: 1rem;
+        font-size: 0.9rem;      
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    
+    .formulariogrupogeneral {
+        grid-template-columns: 1fr; 
+        gap: 0.8rem;
+    }
+
+    .formulario {
+        padding: 1.5rem;        
+    }
+
+    .titulocontacto {
+        font-size: 1.7rem;
+    }
+
+   
+    .formulariogrupo textarea {
+        width: 100%;
+        min-height: 110px;
+    }
+
+    .contenedorfooter {
+        margin: 1.5rem 1rem;       
+    }
+
+    .footersuperior,
+    .footerinferior {
+        flex-direction: column;   
+        text-align: center;
+        gap: 0.8rem;
+    }
 }
 
 @media (max-width: 640px) {

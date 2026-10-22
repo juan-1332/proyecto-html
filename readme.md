@@ -100,3 +100,6 @@ proyecto_HTML/
 
 ## 👥 Contribución y Uso
 Proyecto desarrollado con fines educativos y de concientización comunitaria.
+
+##Link del wireframe: 
+https://www.figma.com/proto/wxPtsQDi996fpB3j0Jpg0Z/wireframe-patitas-felices?node-id=4-6831&t=YSQFl9JSM7oKyvwz-1

@@ -604,6 +604,12 @@ haciendo miguel
   overflow-y: auto;
   max-height: 85vh;
 }
+.perfil-info .badge {
+  position: static;
+  display: inline-block;
+  align-self: center;
+  margin: 0;
+}
 .perfil-header {
   display: flex;
   justify-content: space-between;

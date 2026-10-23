@@ -852,7 +852,105 @@ haciendo miguel
   background-repeat: no-repeat;
   animation: perrito 0.6s steps(6) infinite;
 }
+/* --- SECCIÓN GALERÍA / MOSAICO ASIMÉTRICO PERFECTO --- */
+.seccion-galeria {
+    padding: 5rem 0;
+    background-color: var(--light-color);
+}
 
+/* Contenedor principal que alinea ambas columnas con la misma altura */
+.mosaico-galeria {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* Columna izquierda un poco más ancha */
+    gap: 20px;
+    align-items: stretch;             /* CLAVE: Obliga a que ambas columnas midan lo mismo de alto */
+}
+
+/* Estructura de la foto principal (Izquierda) */
+.galeria-item.principal {
+    display: flex;
+    flex-direction: column;
+    height: 100%;                     /* Ocupa toda la altura disponible del grid */
+}
+
+.galeria-item.principal .galeria-img-wrap {
+    flex-grow: 1;                     /* Hace que la caja de la imagen crezca de forma flexible */
+    min-height: 440px;                /* Altura base ideal para la foto grande */
+}
+
+/* Cuadrícula derecha (2x2) */
+.galeria-grid-secundaria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr); /* CLAVE: Divide el bloque derecho en dos filas idénticas y simétricas */
+    gap: 20px;
+    height: 100%;                     /* Hereda la misma altura exacta del lado izquierdo */
+}
+
+/* Cada tarjeta pequeña de la derecha */
+.galeria-grid-secundaria .galeria-item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.galeria-grid-secundaria .galeria-img-wrap {
+    flex-grow: 1;                     /* Llena perfectamente el espacio asignado por las filas */
+}
+
+/* Estilo general de las imágenes y textos */
+.galeria-img-wrap {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    background-color: var(--card-bg);
+}
+
+.galeria-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;                 /* Evita que las fotos se deformen */
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.galeria-img-wrap img:hover {
+    transform: scale(1.03);
+}
+
+.galeria-caption {
+    font-size: 0.85rem;
+    color: #555;
+    font-weight: 500;
+    padding-left: 2px;
+    margin-top: 6px;
+}
+
+/* --- RESPONSIVE PARA MÓVILES --- */
+@media (max-width: 992px) {
+    .mosaico-galeria {
+        grid-template-columns: 1fr;     /* Pasa a una sola columna en pantallas medianas y pequeñas */
+    }
+    
+    .galeria-item.principal .galeria-img-wrap {
+        min-height: 320px;
+    }
+
+    .galeria-grid-secundaria {
+        height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .galeria-grid-secundaria {
+        grid-template-columns: 1fr;     /* Apila las 4 fotos secundarias individualmente en celulares */
+    }
+    
+    .galeria-grid-secundaria .galeria-img-wrap {
+        height: 220px;
+    }
+}
 
 /*responsive*/
 @media (max-width: 992px){

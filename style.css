@@ -852,42 +852,40 @@ haciendo miguel
   background-repeat: no-repeat;
   animation: perrito 0.6s steps(6) infinite;
 }
-/* --- SECCIÓN GALERÍA / MOSAICO ASIMÉTRICO PERFECTO --- */
+
 .seccion-galeria {
     padding: 5rem 0;
     background-color: var(--light-color);
 }
 
-/* Contenedor principal que alinea ambas columnas con la misma altura */
+
 .mosaico-galeria {
     display: grid;
-    grid-template-columns: 1.2fr 1fr; /* Columna izquierda un poco más ancha */
+    grid-template-columns: 1.2fr 1fr;
     gap: 20px;
-    align-items: stretch;             /* CLAVE: Obliga a que ambas columnas midan lo mismo de alto */
+    align-items: stretch;         
 }
 
-/* Estructura de la foto principal (Izquierda) */
+
 .galeria-item.principal {
     display: flex;
     flex-direction: column;
-    height: 100%;                     /* Ocupa toda la altura disponible del grid */
+    height: 100%;                  
 }
 
 .galeria-item.principal .galeria-img-wrap {
-    flex-grow: 1;                     /* Hace que la caja de la imagen crezca de forma flexible */
-    min-height: 440px;                /* Altura base ideal para la foto grande */
+    flex-grow: 1;                    
+    min-height: 440px;              
 }
 
-/* Cuadrícula derecha (2x2) */
 .galeria-grid-secundaria {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr); /* CLAVE: Divide el bloque derecho en dos filas idénticas y simétricas */
+    grid-template-rows: repeat(2, 1fr); 
     gap: 20px;
-    height: 100%;                     /* Hereda la misma altura exacta del lado izquierdo */
+    height: 100%;
 }
 
-/* Cada tarjeta pequeña de la derecha */
 .galeria-grid-secundaria .galeria-item {
     display: flex;
     flex-direction: column;
@@ -895,10 +893,10 @@ haciendo miguel
 }
 
 .galeria-grid-secundaria .galeria-img-wrap {
-    flex-grow: 1;                     /* Llena perfectamente el espacio asignado por las filas */
+    flex-grow: 1;                  
 }
 
-/* Estilo general de las imágenes y textos */
+
 .galeria-img-wrap {
     width: 100%;
     border-radius: 12px;
@@ -910,7 +908,7 @@ haciendo miguel
 .galeria-img-wrap img {
     width: 100%;
     height: 100%;
-    object-fit: cover;                 /* Evita que las fotos se deformen */
+    object-fit: cover;                
     display: block;
     transition: transform 0.4s ease;
 }
@@ -930,8 +928,7 @@ haciendo miguel
 /* --- RESPONSIVE PARA MÓVILES --- */
 @media (max-width: 992px) {
     .mosaico-galeria {
-        grid-template-columns: 1fr;     /* Pasa a una sola columna en pantallas medianas y pequeñas */
-    }
+        grid-template-columns: 1fr;    
     
     .galeria-item.principal .galeria-img-wrap {
         min-height: 320px;
@@ -944,7 +941,7 @@ haciendo miguel
 
 @media (max-width: 576px) {
     .galeria-grid-secundaria {
-        grid-template-columns: 1fr;     /* Apila las 4 fotos secundarias individualmente en celulares */
+        grid-template-columns: 1fr;    
     }
     
     .galeria-grid-secundaria .galeria-img-wrap {
@@ -952,7 +949,6 @@ haciendo miguel
     }
 }
 
-/*responsive*/
 @media (max-width: 992px){
   .contenedorcontacto{
    grid-template-columns: 1fr;

@@ -103,3 +103,7 @@ Proyecto desarrollado con fines educativos y de concientización comunitaria.
 
 ## Link del wireframe: 
 https://www.figma.com/proto/wxPtsQDi996fpB3j0Jpg0Z/wireframe-patitas-felices?node-id=4-6831&t=YSQFl9JSM7oKyvwz-1
+
+Módulo de Donaciones - Patitas Felices  (creado para el parcial)
+
+Esta página web (donaciones.html) está diseñada para informar a los usuarios de forma clara y transparente sobre el destino de los recursos y motivar la colaboración con el refugio. Incluye secciones detalladas sobre la distribución real de los fondos (cuidado médico, mantenimiento, costos operativos, hogares temporales y logística) y los motivos clave para donar, ofreciendo una interfaz moderna, responsiva y orientada a generar confianza en la comunidad.

@@ -1,0 +1,231 @@
+:root {
+  --primary-color: #4A6B53;
+  --secondary-color: #E76F51;
+  --dark-color: #3F4641;
+  --light-color: #F9F6F0;
+  --card-bg: #EFECE6;
+  --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --border-radius: 12px;
+  --transition: all 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  font-family: var(--font-main);
+  line-height: 1.6;
+}
+
+.banner {
+  background: linear-gradient(135deg, var(--primary-color), #2c4232);
+  color: #ffffff;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.contenedorbanner {
+  margin: 0 auto;
+  max-width: 760px;
+}
+
+.contenedorbanner h1 {
+  color: #ffffff;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+}
+
+.contenedorbanner p {
+  font-size: 1.1rem;
+}
+
+.enlace-inicio {
+  color: #ffffff;
+  display: inline-block;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  text-decoration: none;
+}
+
+.enlace-inicio:hover {
+  text-decoration: underline;
+}
+
+.seccioninformativa {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 3rem auto;
+  max-width: 1200px;
+  padding: 0 1.5rem;
+}
+
+.porquedonar,
+.comousamos,
+.impacto {
+  background-color: var(--card-bg);
+  border-left: 5px solid var(--secondary-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  transition: var(--transition);
+}
+
+.porquedonar:hover,
+.comousamos:hover,
+.impacto:hover {
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.card-img {
+  border-radius: 8px;
+  display: block;
+  height: 190px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  width: 100%;
+}
+
+.seccioninformativa h2 {
+  color: var(--primary-color);
+  font-size: 1.25rem;
+  margin-bottom: 0.65rem;
+}
+
+.seccioninformativa p {
+  color: #555b56;
+}
+
+.impacto p {
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.seccion-donacion {
+  padding: 0 1.5rem 4rem;
+}
+
+.contenedor-donacion {
+  background-color: #ffffff;
+  border-radius: var(--border-radius);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  margin: 0 auto;
+  max-width: 760px;
+  padding: 2.5rem;
+}
+
+.encabezado-formulario {
+  margin-bottom: 1.75rem;
+  text-align: center;
+}
+
+.encabezado-formulario h2 {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.encabezado-formulario p {
+  color: #626862;
+}
+
+.formulariogrupogeneral {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.formulariogrupo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.15rem;
+}
+
+.formulariogrupo label {
+  color: var(--primary-color);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.formulariogrupo input,
+.formulariogrupo select {
+  background-color: #fcfbfa;
+  border: 1px solid #d5d8d4;
+  border-radius: 8px;
+  color: var(--dark-color);
+  font: inherit;
+  min-height: 46px;
+  padding: 0.65rem 0.85rem;
+  width: 100%;
+}
+
+.formulariogrupo input:focus,
+.formulariogrupo select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(74, 107, 83, 0.15);
+  outline: none;
+}
+
+.botonenviar {
+  background-color: var(--secondary-color);
+  border: 0;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  padding: 0.85rem 1.5rem;
+  transition: var(--transition);
+  width: 100%;
+}
+
+.botonenviar:hover {
+  box-shadow: 0 6px 15px rgba(231, 111, 81, 0.25);
+  transform: translateY(-2px);
+}
+
+.nota-formulario {
+  color: #686e69;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .seccioninformativa {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .banner {
+    padding: 3rem 1.25rem;
+  }
+
+  .seccioninformativa {
+    grid-template-columns: 1fr;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  .seccion-donacion {
+    padding: 0 1rem 2.5rem;
+  }
+
+  .contenedor-donacion {
+    padding: 1.5rem;
+  }
+
+  .formulariogrupogeneral {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}

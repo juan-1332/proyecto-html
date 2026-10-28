@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conoce cómo tus donaciones ayudan a rescatar y cuidar animales.">
+    <title>Donaciones | Patitas Felices</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="banner">
+    <div class="contenedorbanner">
+        <h1>Ayúdanos a cambiar vidas</h1>
+        <p>Tu contribución transforma rescates en segundas oportunidades llenas de amor.</p>
+        <a class="enlace-inicio" href="index.html">← Volver al inicio</a>
+    </div>
+</header>
+<section class="seccioninformativa">
+    <div class="porquedonar">
+        <img src="imagenesparcial/porque-donar.webp" alt="porque donar" class="card-img">
+        <h2>¿Por qué donar?</h2>
+        <p>Cada día rescatamos animales en situación de calle o maltrato. Tu apoyo financia su alimento, refugio y atención veterinaria de emergencia.</p>
+    </div>
+    
+    <div class="comousamos">
+        <img src="imagenesparcial/como-usamos.webp" alt="como usamos el dinero" class="card-img">
+        <h2>¿Cómo usamos las donaciones?</h2>
+        <p>El 100% de los fondos se destina a alimento, consultas médicas, esterilizaciones, vacunas y mantenimiento de nuestras instalaciones.</p>
+    </div>
+    
+    <div class="impacto">
+        <img src="imagenesparcial/impacto-en-cifras.webp" alt="impacto en cifras" class="card-img">
+        <h2>Impacto en cifras</h2>
+        <p>+500 rescates exitosos</p>
+        <p>+350 adopciones completadas</p>
+        <p>+1,000 esterilizaciones realizadas este año gracias a ti</p>
+    </div>
+</section>
+<section class="seccion-donacion">
+    <div class="contenedor-donacion">
+        <div class="encabezado-formulario">
+            <h2>Haz tu donación</h2>
+            <p>Cada aporte, grande o pequeño, nos ayuda a cuidar de más animales.</p>
+        </div>
+        <form>
+            <div class="formulariogrupo">
+                <label for="nombre">Nombre completo *</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" autocomplete="name" required>
+            </div>
+            <div class="formulariogrupo">
+                <label for="email">Correo electrónico *</label>
+                <input type="email" id="email" name="email" placeholder="patitas@ejemplo.com" autocomplete="email" required>
+            </div>
+            <div class="formulariogrupogeneral">
+                <div class="formulariogrupo">
+                    <label for="montodonacion">Monto de donación *</label>
+                    <input type="number" id="montodonacion" name="monto" placeholder="100000" min="1" step="1000" required>
+                </div>
+                <div class="formulariogrupo">
+                    <label for="metodo">Método de donación *</label>
+                    <select id="metodo" name="metodo" required>
+                        <option value="" disabled selected>Selecciona un método</option>
+                        <option value="transferencia">Transferencia</option>
+                        <option value="tarjeta">Tarjeta</option>
+                        <option value="efectivo">Efectivo</option>
+                        <option value="credicuerpo">credicuerpo 🥵</option>
+                    </select>
+                </div>
+            </div>
+            <button type="button" class="botonenviar">Donar ahora</button>
+        </form>
+    </div>
+</section>
+</body>
+</html>

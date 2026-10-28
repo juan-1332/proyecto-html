@@ -123,7 +123,7 @@ body {
     font-weight: bold;
     color: var(--primary-color);
     margin-bottom: 1rem;
-}
+} 
 .tituloinicio{
     font-size: 3rem;
     line-height: 1.1;
@@ -378,7 +378,7 @@ haciendo miguel
 */
 
 .seccion-adopta {
-  padding: 60px 0;
+  padding: 60px 0;       
 }
 
 .encabezado-seccion {
@@ -929,7 +929,7 @@ haciendo miguel
 @media (max-width: 992px) {
     .mosaico-galeria {
         grid-template-columns: 1fr;    
-    
+    }
     .galeria-item.principal .galeria-img-wrap {
         min-height: 320px;
     }

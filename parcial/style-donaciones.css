@@ -1,0 +1,415 @@
+:root {
+  --primary-color: #4A6B53;     
+  --secondary-color: #E76F51;   
+  --dark-color: gray;        
+  --light-color: #F9F6F0;       
+  --card-bg: #EFECE6;           
+  --success-color:#2ecc71;
+  --error-color:#e74c3c;
+  --accent-color: #f1c40f;
+  
+  --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --max-width: 1200px;
+  --border-radius: 8px;
+  --transition: all 0.3s ease;
+}
+
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 1.5rem;
+}
+
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.Encabezado {
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+  position: sticky;                      
+  top: 0;
+  z-index: 1000;                        
+}
+
+.header-contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;            
+  padding: 1rem 0;
+}
+
+.logotipo h1 {
+  font-size: 1.5rem;
+  color: var(--primary-color);   
+}
+
+.menu {
+  display: flex;
+  gap: 1.5rem;                  
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 600;
+    position: relative;
+    transition: var(--transition);
+}
+
+.menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;           
+    height: 2px;       
+    bottom: -4px;      
+    left: 0;
+    background-color: var(--primary-color); 
+    transition: width 0.3s ease; 
+}
+.menu a:hover::after,
+.menu a.active::after {
+    width: 100%; 
+}
+
+.menu a:hover {
+    color: var(--primary-color);
+}
+
+.contenedor-porque {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 4rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.textoinicio{
+    max-width: 600px;
+    margin-bottom: 1rem;
+}
+.carrusel{
+    width: 480px; 
+    height: 430px;
+    border-radius: 16px;
+    background-color: var(--card-bg);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+
+}
+.textoinicio{
+    margin-bottom: 1rem;
+}
+
+.imagen1, .imagen2, .imagen3 {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;   
+    background-repeat: no-repeat;    
+    background-position: center ;  
+    opacity: 0;                  
+    animation: bannerAnimation 9s infinite; 
+}
+.imagen1 {
+    background-image: url(../imagenes/gatito1.jpg);
+    animation-delay: 0s;  
+}
+.imagen2 {
+    background-image: url(../imagenes/perrito1.jpg);
+    animation-delay: 3s;  
+}
+.imagen3 {
+    background-image: url(../imagenes/perrito2.jpg);
+    animation-delay: 6s;
+}
+
+.usoscifras{
+    padding: 3rem 0;
+    background-color: var(--light-color);
+}
+.contenedor-usos {
+    text-align: center;
+}
+
+.tituloprincipalmision{
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    margin-bottom: 1.5rem;
+}
+
+.mision{
+    display:flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.usos{
+    background-color: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    max-width: 500px;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: var(--transition);
+}
+.cifras{
+    background-color: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    max-width: 500px;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: var(--transition);
+}
+.usos:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+.cifras:hover{
+     transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+.texto-usos{
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+.texto-cifras{
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+parrafo-usos{
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+parrafo-cifras{
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+.seccioncontacto{
+  padding: 4rem 0;
+  background-color: var(--light-color);
+}
+.contenedorcontacto{
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+.formulario{
+  background-color: #ffffff;
+  padding: 2.5rem;
+  margin: 0rem 1.5rem 2.5rem 10rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+.titulocontacto{
+  font-size: 2.2rem;
+  color: var(--dark-color);
+  margin-bottom: 0.5rem;
+}
+.descripccioncontacto {
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+.formulariogrupogeneral{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+.formulariogrupo{
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+.formulariogrupo label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--dark-color);
+  margin-bottom: 0.4rem;
+}
+.formulariogrupo input,
+.formulariogrupo select {
+  padding: 0.75rem 1rem;
+  border: 1px solid #dcd6cd;
+  border-radius: var(--border-radius);    
+  font-family: var(--font-main);
+  font-size: 0.95rem;
+  background-color: #fcfbfa;
+  color: var(--dark-color);
+  transition: var(--transition);
+
+}
+.formulariogrupo textarea{
+  padding: 0.75rem 1rem;
+  border: 1px solid #dcd6cd;
+  border-radius: var(--border-radius);    
+  font-family: var(--font-main);
+  font-size: 0.95rem;
+  background-color: #fcfbfa;
+  color: var(--dark-color);
+  transition: var(--transition);
+  resize:none
+}
+.formulariogrupo input:focus,
+.formulariogrupo select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(74, 107, 83, 0.1);
+}
+.formulariogrupo textarea:focus{
+  outline: none;
+  border-color: var(--primary-color);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(74, 107, 83, 0.12);
+}
+.terminosycondiciones{
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin: 1.5rem 0;
+  font-size: 0.85rem;
+  color:#555;
+}
+.terminosycondiciones input{
+  margin-top: 0.3rem;
+}
+.botonenviar {
+  text-decoration: none;
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  padding: 0.85rem 1.8rem;
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.botonenviar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(231, 111, 81, 0.3);
+}
+.informacionlateral{
+  display: flex;
+  flex-direction: column;
+  gap:1.5rem;
+  align-items: flex-start;
+  width: 100%;
+}
+.tarjetainformacioncontacto,
+.tarjetainformacionsecundaria{
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  width: 100%;
+  max-width: 460px;
+  box-sizing: border-box;
+}
+.tarjetainformacionsecundaria{
+  background-color: #E8EFE9;
+}
+.tarjetainformacioncontacto h3,
+.tarjetainformacionsecundaria h3 {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin-bottom: 1.2rem;
+}
+.listacontacto {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.listacontacto li{
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+}
+.listacontacto strong{
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #777;
+  letter-spacing: 0.5px;
+}
+.listacontacto a,
+.listacontacto span {
+  color: var(--dark-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+.listacontacto a:hover{
+  color: var(--secondary-color);
+}
+.horariosatencion{
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding-top: 1rem;
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+.notalegal{
+  font-size: 0.75rem;;
+  color: #888;
+  line-height: 1.4;
+  display: block;
+}
+.tarjetainformacionsecundaria p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+.notaenfasis{
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+
+
+
+
+
+
+
+@keyframes bannerAnimation {
+    0% { 
+        opacity: 0; 
+       
+    }
+    10% { 
+        opacity: 1;
+    }
+    33% { 
+        opacity: 1; 
+    }
+    43% { 
+        opacity: 0; 
+    
+    }
+    100% { 
+        opacity: 0; 
+    }
+}
